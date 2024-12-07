@@ -44,17 +44,17 @@ const items = [
 export function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarHeader className="flex h-12 shrink-0 gap-2 border-b px-4">
-        <h1 className="text-2xl font-semibold">Template</h1>
+      <SidebarHeader className="flex h-16 shrink-0 gap-4 border-b px-6 justify-center ">
+        <h1 className="text-2xl font-semibold">Menu</h1>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="gap-2 pt-4">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild size="lg">
                     <a href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
